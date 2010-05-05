@@ -1,6 +1,6 @@
 [user]
-	name = User Name
-	email = test@example.com
+	name = Michael Smith
+	email = michael.smith@xpmt.com.au
 
 [core]
 	excludesfile = ~/.gitignore-global
