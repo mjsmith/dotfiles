@@ -1,10 +1,5 @@
-### Christof Glaser's bashrc
+### Michael Smith's .bash_profile
 ##
-# 2008-08-25
-#
-# Clone from git://github.com/scivi/dotfiles.git 
-# Look at http://github.com/scivi/dotfiles/tree/master/etc/bashrc
-# Get it from http://github.com/scivi/dotfiles/tree/master%2Fetc%2Fbashrc?raw=true
 
 STARTUP="in progress"
 
@@ -43,8 +38,6 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias df='df -h'
 alias du='du -k'
-alias vix='/usr/bin/vi'
-alias vi='vim'
 alias x='emacsclient'
 alias clean='rm -f *~ #*#'
 alias grep='GREP_COLOR="1;37;41" LANG=C grep --color=auto'
@@ -71,7 +64,7 @@ TTY=$(basename $(tty))
 export TTY
 
 [ -n "$is_darwin" ] && export VISUAL="mate -w"
-export EDITOR=vim
+export EDITOR=nano
 export PAGER=less
 export LESS="-riMSx4 -FX"
 
@@ -95,7 +88,7 @@ prepend_path() {
 }
 
 if [ -n "$is_darwin" ]; then
-  for d in /usr/local/pgsql /usr/local /opt/ /opt/local; do
+  for d in /usr/local /opt/ /opt/local; do
     [ -d $d/bin ] && prepend_path PATH $d/bin
   done
 fi
@@ -104,16 +97,14 @@ for d in /opt/local/share; do
   [ -d $d/man ] && prepend_path MANPATH $d/man
 done
 
-# Certain Paths on Rails
-prepend_path PATH ./script
-export PATH
 
 # Certain Shorthands of Folders
-for d in ~/lib ~/Sites ~/Documents; do
-  [ -d $d ] && append_path CDPATH $d
-done
-export CDPATH
-shopt -s cdable_vars cdspell
+#for d in ~/lib ~/Sites ~/Documents; do
+#  [ -d $d ] && append_path CDPATH $d
+#done
+#export CDPATH
+
+#shopt -s cdable_vars cdspell
 
 # Certain Manly Colours
 # From http://zoetrope.speakermouth.com/2008/8/18/colored-man-pages
