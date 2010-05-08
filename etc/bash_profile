@@ -42,6 +42,9 @@ alias x='emacsclient'
 alias clean='rm -f *~ #*#'
 alias grep='GREP_COLOR="1;37;41" LANG=C grep --color=auto'
 
+# Matlab-like searching of history
+bind '"\e[B": history-search-forward'
+bind '"\e[A": history-search-backward'
 
 # Certain Remote Shelling
 function R() {
