@@ -100,6 +100,7 @@ for d in /opt/local/share; do
   [ -d $d/man ] && prepend_path MANPATH $d/man
 done
 
+export PATH=$PATH:/usr/texbin
 
 # Certain Shorthands of Folders
 #for d in ~/lib ~/Sites ~/Documents; do
@@ -383,3 +384,6 @@ else
 fi
 
 ### Certainly Enough Now
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

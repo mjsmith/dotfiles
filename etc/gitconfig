@@ -3,7 +3,7 @@
 	email = michael.smith@xpmt.com.au
 
 [core]
-	excludesfile = ~/.gitignore-global
+	excludesfile = /Users/michael/.gitignore-global
 
 [color]
 	diff = auto
@@ -34,3 +34,9 @@
 [apply]
 	whitespace = nowarn
 
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
